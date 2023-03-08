@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humminger</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body>
+    <main>
+        <header class="shadow-lg">
+            <nav class="p-4 w-full">
+                <div class="container mx-auto lg:max-w-screen-md">
+                    <div class="flex flex-row items-center justify-between w-full">
+                        <span class="flex flex-row items-center space-x-8">
+                            <a href="#">
+                                <i class="fa-solid fa-bird text-2xl text-blue-600"></i>
+                            </a>
+                            <ul class="flex flex-row items-center space-x-6">
+                                <li>
+                                    <a href="#" class="font-semibold">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="font-semibold">Profile</a>
+                                </li>
+                            </ul>
+                        </span>
+                        <button type="submit"
+                            class="px-4 py-2 border bg-blue-600 text-white font-medium rounded-full hover:bg-transparent hover:border-blue-600 hover:text-blue-600 duration-200">Logout</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="py-6">
+            <div class="container mx-auto lg:max-w-screen-md">
+                <!-- Main -->
+                <div class="w-full">
+                    <!-- Hums on your feed -->
+                    <div class="flex flex-row items-start space-x-4 p-4 w-full">
+                        <a href="#" class="flex items-center">
+                            <img alt="Man"
+                                src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                                class="h-10 w-10 rounded-full object-cover" />
+                        </a>
+                        <div class="flex flex-col items-start space-y-4 w-full">
+                            <div class="flex flex-col items-start space-y-1 w-full">
+                                <div class="flex flex-row items-center justify-between w-full">
+                                    <div class="flex flex-row items-center space-x-2">
+                                        <span class="font-semibold">John Cena</span>
+                                        <span class="text-blue-600">@johncena</span>
+                                    </div>
+                                    <span class="text-gray-300 text-sm">A minute ago</span>
+                                </div>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, dolorum?
+                                    Corrupti enim quidem impedit! Enim labore laboriosam ipsum totam tenetur
+                                    quos
+                                    soluta excepturi aliquam obcaecati magni, sapiente repellendus, nam pariatur
+                                    porro numquam voluptatum rerum quas repudiandae! Accusamus vel voluptatibus
+                                    odio.</span>
+                            </div>
+                            <div class="flex flex-row items-center space-x-8 w-full text-gray-400">
+                                <div class="flex flex-row items-center space-x-2">
+                                    <i class="fa-regular fa-comment"></i>
+                                    <span>69</span>
+                                </div>
+                                <div class="flex flex-row items-center space-x-2">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <span>69</span>
+                                </div>
+                                <div class="flex flex-row items-center space-x-2">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span>69</span>
+                                </div>
+                            </div>
+                            <textarea name="" id="" cols="30" rows="10"
+                                class="resize-none border border-gray-300 w-full h-12 rounded-full px-4 py-2.5"
+                                placeholder="Reply to @johncena"></textarea>
+                            <div class="p-4">
+                                <div class="flex flex-row items-start space-x-4">
+                                    <a href="#" class="flex items-center">
+                                        <img alt="Man"
+                                            src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                                            class="h-10 w-10 rounded-full object-cover" />
+                                    </a>
+                                    <div class="flex flex-col items-start space-y-4 w-full">
+                                        <div class="flex flex-col items-start space-y-1 w-full">
+                                            <div
+                                                class="flex flex-col items-start w-full xs:flex-row xs:items-center xs:justify-between">
+                                                <div class="flex flex-row items-center space-x-2">
+                                                    <span class="font-semibold">John Cena</span>
+                                                    <span class="text-blue-600">@johncena</span>
+                                                </div>
+                                                <span class="text-gray-300 text-sm">A minute ago</span>
+                                            </div>
+                                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, dolorum?
+                                                Corrupti enim quidem impedit! Enim labore laboriosam ipsum totam tenetur
+                                                quos
+                                                soluta excepturi aliquam obcaecati magni, sapiente repellendus, nam pariatur
+                                                porro numquam voluptatum rerum quas repudiandae! Accusamus vel voluptatibus
+                                                odio.
+                                            </span>
+                                        </div>
+                                        <div class="flex flex-row items-center space-x-8 w-full text-gray-400">
+                                            <div class="flex flex-row items-center space-x-2">
+                                                <i class="fa-solid fa-retweet"></i>
+                                                <span>69</span>
+                                            </div>
+                                            <div class="flex flex-row items-center space-x-2">
+                                                <i class="fa-regular fa-heart"></i>
+                                                <span>69</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+</body>
+
+</html>

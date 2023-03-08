@@ -12,49 +12,50 @@
 </head>
 
 <body>
-    <main class="p-4">
-        <header>
-            <nav class="w-full">
-                <div class="container mx-auto w-3/4">
+    <main>
+        <header class="shadow-lg">
+            <nav class="p-4 w-full">
+                <div class="container mx-auto lg:max-w-screen-md">
                     <div class="flex flex-row items-center justify-between w-full">
                         <span class="flex flex-row items-center space-x-8">
                             <a href="#">
-                                <i class="fa-solid fa-bird text-2xl"></i>
+                                <i class="fa-solid fa-bird text-2xl text-blue-600"></i>
                             </a>
                             <ul class="flex flex-row items-center space-x-6">
                                 <li>
-                                    <a href="#">Home</a>
+                                    <a href="#" class="font-semibold">Home</a>
                                 </li>
                                 <li>
-                                    <a href="#">Profile</a>
+                                    <a href="#" class="font-semibold">Profile</a>
                                 </li>
                             </ul>
                         </span>
-                        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-full">Logout</button>
+                        <button type="submit" class="px-4 py-2 border bg-blue-600 text-white font-medium rounded-full hover:bg-transparent hover:border-blue-600 hover:text-blue-600 duration-200">Logout</button>
                     </div>
                 </div>
             </nav>
         </header>
         <section class="py-6">
-            <div class="container mx-auto w-3/4">
+            <div class="container mx-auto lg:max-w-screen-md">
                 <!-- Main -->
                 <div class="w-full">
-                    <div class="py-2 flex flex-col items-start space-y-3">
+                    <div class="space-y-3">
                         <!-- Hum something -->
-                        <div class="flex flex-row items-start space-x-4 p-4 border rounded-md w-full">
+                        <div class="flex flex-row items-start space-x-4 p-4 w-full">
                             <a href="#" class="flex items-center">
                                 <img alt="Man"
                                     src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                                     class="h-10 w-10 rounded-full object-cover" />
                             </a>
                             <form action="" method="post" class="w-full flex flex-col items-end space-y-2">
-                                <textarea name="" id="" class="resize-none border w-full h-24 rounded-md px-2 py-1"
+                                <textarea name="" id="" class="resize-none border w-full h-24 rounded-md px-4 py-2"
                                     placeholder="Hum something..."></textarea>
-                                <button type="submit" class="px-6 py-2 rounded-full bg-blue-600 text-white">Hum</button>
+                                <button type="submit" class="px-4 py-2 border bg-blue-600 text-white font-medium rounded-full hover:bg-transparent hover:border-blue-600 hover:text-blue-600 duration-200">Hum</button>
                             </form>
                         </div>
+                        <hr>
                         <!-- Hums on your feed -->
-                        <div class="flex flex-row items-start space-x-4 p-4 border rounded-md w-full">
+                        <div class="flex flex-row items-start space-x-4 p-4 w-full">
                             <a href="#" class="flex items-center">
                                 <img alt="Man"
                                     src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
@@ -75,22 +76,29 @@
                                         porro numquam voluptatum rerum quas repudiandae! Accusamus vel voluptatibus
                                         odio.</span>
                                 </div>
-                                <div class="flex flex-row items-center space-x-8 w-full text-gray-400">
-                                    <div class="flex flex-row items-center space-x-2">
-                                        <i class="fa-regular fa-comment"></i>
-                                        <span>69</span>
+                                <div class="flex flex-row items-center justify-between w-full">
+                                    <div class="flex flex-row items-center space-x-8 w-full text-gray-400">
+                                        <div class="flex flex-row items-center space-x-2">
+                                            <i class="fa-regular fa-comment"></i>
+                                            <span>69</span>
+                                        </div>
+                                        <div class="flex flex-row items-center space-x-2">
+                                            <i class="fa-solid fa-retweet"></i>
+                                            <span>69</span>
+                                        </div>
+                                        <div class="flex flex-row items-center space-x-2">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>69</span>
+                                        </div>
                                     </div>
-                                    <div class="flex flex-row items-center space-x-2">
-                                        <i class="fa-solid fa-retweet"></i>
-                                        <span>69</span>
-                                    </div>
-                                    <div class="flex flex-row items-center space-x-2">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <span>69</span>
+                                    <div class="flex flex-row items-center justify-end space-x-8 w-full text-gray-400">
+                                        <i class="fa-regular fa-trash"></i>
+                                        <i class="fa-regular fa-bookmark"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <hr>
                     </div>
                 </div>
             </div>
