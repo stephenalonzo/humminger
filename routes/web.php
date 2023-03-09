@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HumController;
+use App\Http\Controllers\RehumReplyController;
+use App\Http\Controllers\ReplyController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,7 +40,7 @@ use Illuminate\Support\Facades\Route;
 // - Return redirect to home page ('/')
 
 // Show feed
-Route::get('/', [HumController::class, 'index']);
+Route::get('/', [HumController::class, 'index'])->middleware('auth');
 
 // Store hum
 Route::post('/', [HumController::class, 'store']);
@@ -50,10 +52,34 @@ Route::get('/register', [UserController::class, 'create']);
 Route::post('/register', [UserController::class, 'store']);
 
 // Show login
-Route::get('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login'])->name('login');
 
 // Log in user
 Route::post('/authenticate', [UserController::class, 'authenticate']);
 
 // View profile
 Route::get('/users/{user}', [UserController::class, 'show']);
+
+// Repost (rehum) a hum
+Route::get('/reply/{hum}', [HumController::class, 'reply']);
+
+// Send reply to hum
+Route::post('/reply/{hum}/send', [HumController::class, 'send_reply']);
+
+// Reply to a hum
+Route::post('/rehum/{hum}', [HumController::class, 'rehum']);
+
+// Like a hum
+Route::post('/like/{hum}', [HumController::class, 'like']);
+
+// Rehum the reply hum
+Route::post('/rehum/hum/{hum}', [HumController::class, 'rehum']);
+
+// Like the reply hum
+Route::post('/like/hum/{hum}', [HumController::class, 'like']);
+
+// Rehum the reply
+Route::post('/rehum/reply/{reply}', [ReplyController::class, 'rehum']);
+
+// Like the reply
+Route::post('/like/reply/{reply}', [ReplyController::class, 'like']);

@@ -2,7 +2,7 @@
 <x-nav></x-nav>
 <x-layout>
     <!-- Main -->
-    <div class="w-full">
+    <x-wrapper>
         <div class="space-y-3">
             <!-- Hum something -->
             <div class="flex flex-row items-start space-x-4 p-4 w-full">
@@ -23,7 +23,6 @@
             <!-- Hums on your feed -->
             @unless(count($hums) == 0)
                 @foreach ($hums as $hum)
-                    @if (str_contains(auth()->user()->following, $hum->user->username) || auth()->user()->username == $hum->user->username)
                     <div class="flex flex-row items-start space-x-4 p-4 w-full">
                         <a href="#" class="flex items-center">
                             <img alt="Man"
@@ -62,15 +61,27 @@
                             <div class="flex flex-row items-center justify-between w-full">
                                 <div class="flex flex-row items-center space-x-8 w-full text-gray-400">
                                     <div class="flex flex-row items-center space-x-2">
-                                        <i class="fa-regular fa-comment"></i>
+                                        <a href="/reply/{{ $hum->id }}">
+                                            <i class="fa-regular fa-comment"></i>
+                                        </a>
                                         <span>{{ $hum->replies }}</span>
                                     </div>
                                     <div class="flex flex-row items-center space-x-2">
-                                        <i class="fa-solid fa-retweet"></i>
+                                        <form action="/rehum/{{ $hum->id }}" method="POST">
+                                            @csrf
+                                            <button type="submit">
+                                                <i class="fa-solid fa-retweet"></i>
+                                            </button>
+                                        </form>
                                         <span>{{ $hum->rehums }}</span>
                                     </div>
                                     <div class="flex flex-row items-center space-x-2">
-                                        <i class="fa-regular fa-heart"></i>
+                                        <form action="/like/{{ $hum->id }}" method="POST">
+                                            @csrf
+                                            <button type="submit">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                        </form>
                                         <span>{{ $hum->likes }}</span>
                                     </div>
                                 </div>
@@ -82,12 +93,11 @@
                         </div>
                     </div>
                     <hr>
-                    @endif
                 @endforeach
             @else
                 <p>No hums found.</p>
             @endunless
         </div>
-    </div>
+    </x-wrapper>
 </x-layout>
 <x-footer></x-footer>

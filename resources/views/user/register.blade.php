@@ -1,7 +1,7 @@
 <x-header></x-header>
 <x-layout>
     <!-- Main -->
-    <div class="relative w-full h-screen">
+    <x-wrapper class="relative h-screen">
         <!-- Register -->
         <div
             class="p-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-6 w-full">
@@ -32,6 +32,6 @@
                 </div>
             </form>
         </div>
-    </div>
+    </x-wrapper>
 </x-layout>
 <x-footer></x-footer>

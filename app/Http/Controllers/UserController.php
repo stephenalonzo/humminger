@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Hum;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -12,7 +14,11 @@ class UserController extends Controller
     public function show(User $user)
     {
 
-        return view('user.profile', ['user' => $user]);
+        // dd(DB::table('hums')->where('user_id', $user->id));
+        return view('user.profile', [
+            'user' => $user,
+            'hums' => DB::table('hums')->where('user_id', $user->id)->get()
+        ]);
 
     }
 
